@@ -1,1 +1,75 @@
-<h3>My Sites</h3> <p>&nbsp;</p> <div class="input-group"> <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span> <input class="form-control" type="text" placeholder="search..."> </div> <p>&nbsp;</p> <div class="input-group"> <span class="input-group-addon">Filter by:</span> <select class="form-control"> <option>Arnold <option>Tony Blair <option>Ken Livingstone <option>David Cameron <option>Ed Milliband </select> </div> <p>&nbsp;</p> <div class="row"> <div class="row" data-ng-hide="vm.loadingSites"> <span class="col-md-11"> <div class="row"> <span class="col-md-4" data-ng-repeat="site in vm.sites"> <div class="panel panel-default"> <div class="panel-heading"> <h1 class="panel-title"><a href="#">{{site.rentifySubDomain}}.rentify.com</a></h1> </div> <div class="panel-body"> <div>Owner: {{site.owner}}</div> </div> <div class="panel-footer"> <span> <a class="btn btn-info btn-xs" href="#/configuresitetheme">Edit</a> <button class="btn btn-danger btn-xs" data-ng-click="vm.deleteSite(site)">Delete</button> </span> </div> </div> </span> </div> </span> <span class="col-md-1"> <a href="#/configuresitetheme" class="btn btn-success btn-xs btn-block">Add</a> </span> </div> </div>
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head">
+  <div class="container">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+      <h1>My Sites
+        <small>my rentify websites</small>
+      </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+  </div>
+</div>
+<!-- END PAGE HEAD -->
+
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+  <div class="container">
+    <!-- BEGIN PAGE CONTENT INNER -->
+    <div class="row margin-top-5">
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Search:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon2">
+												<span class="input-group-btn">
+												<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+												</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon2">Filter by Owner:</span>
+          <select class="form-control" aria-describedby="basic-addon2">
+            <option>Arnold</option>
+            <option>Tony Blair</option>
+            <option>Ken Livingston</option>
+            <option>David Cameron</option>
+            <option>Ed Milliband</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pull-right">
+        <a href="#/configuresitetheme" class="btn btn-circle btn-success btn"><i class="fa fa-plus"></i> Add</a>
+      </div>
+
+    </div>
+
+    <div class="row margin-top-20">
+          <span class="col-md-4" data-ng-repeat="site in vm.sites">
+      <div class="portlet box blue-hoki">
+        <div class="portlet-title">
+          <div class="caption">
+            <i class="fa fa-globe"></i>{{site.rentifySubDomain}}
+          </div>
+          <div class="actions">
+            <a href="#/configuresitetheme" class="btn btn-default btn-sm">
+              <i class="fa fa-cog"></i> Configure </a>
+          </div>
+        </div>
+        <div class="portlet-body">
+          <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 50px;">
+            <div class="scroller" style="height: 50px; overflow: hidden; width: auto;" data-rail-visible="1"
+                 data-rail-color="yellow" data-handle-color="#a1b2bd" data-initialized="1">
+              <strong>Owner:</strong> {{site.owner}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+
+    </div>
+    <!-- END PAGE CONTENT -->
+
+</div>
+</div>

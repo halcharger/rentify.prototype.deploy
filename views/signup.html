@@ -1,1 +1,27 @@
-<div data-ng-include="'views/main.html'"></div> <form class="form-login" role="form"> <h2 class="form-login-heading">Sign up</h2> <div class="form-group"> <input type="text" class="form-control" placeholder="Full name" required> </div> <div class="form-group"> <input type="Email" class="form-control" placeholder="Email" required autofocus> </div> <div class="form-group"> <input type="password" class="form-control" placeholder="Password" required> </div> <div class="form-group"> <input type="password" class="form-control" placeholder="Confirm Password" required> </div> <div class="form-group"> <select> <option>Paypal <option>PayGate </select> </div> <div class="form-group"> <button class="btn btn-info btn-block" data-ng-click="vm.signUp()">Sign Up</button> </div> </form>
+<div data-ng-include="'views/main.html'"></div>
+<form class="form-login" role="form">
+  <h2 class="form-login-heading">Sign up</h2>
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Full name" required>
+  </div>
+  <div class="form-group">
+    <input type="Email" class="form-control" placeholder="Email" required
+           autofocus>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Password" required>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Confirm Password" required>
+  </div>
+  <div class="form-group">
+    <select>
+      <option>Paypal</option>
+      <option>PayGate</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info btn-block" data-ng-click="vm.signUp()">Sign Up</button>
+  </div>
+</form>

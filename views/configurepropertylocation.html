@@ -1,1 +1,134 @@
-<p>&nbsp;</p> <ul class="nav nav-pills"> <li role="presentation"><a href="#">seaviewholidays.rentify.com</a></li> <li role="presentation"><a href="#/configuresitetheme">Theme and Styling</a></li> <li role="presentation" class="active"><a href="#/configuresiteproperties">Property Details</a></li> <li role="presentation"><a href="#/configuresitepages">Pages</a></li> </ul> <p>&nbsp;</p> <ol class="breadcrumb"> <li>Rentify.com</li> <li>Property Management</li> <li class="active">Edit Property Sea View Holidays Property One</li> </ol> <ul class="nav nav-pills"> <li role="presentation"><a href="#/configurepropertyoverview">Overview</a></li> <li role="presentation" class="active"><a href="#/configurepropertylocation">Location</a></li> <li role="presentation"><a href="#/configurepropertygallery">Gallery</a></li> <li role="presentation"><a href="#/configurepropertyrates">Rates</a></li> <li role="presentation"><a href="#/configurepropertycontacts">Contact</a></li> <li role="presentation"><a href="#/configurepropertyreviews">Reviews</a></li> <li><a href="#" tooltip="These links to the left should represent a wizard steps progression, Overview (step 1), Location  (step 2), Gallery (step 3), Rates (Step 4), Contact (step 5), reviews (step 6)" tooltip-placement="right"><i class="fa fa-question-circle"></i></a></li> </ul> <h3 class="form-login-heading">Property Address</h3> <div class="form-group"> <label for="country">Country</label> <input type="text" id="country" class="form-control" placeholder="should use typeahead to show countries" required> </div> <div class="form-group"> <label for="city">City / Town</label> <input type="text" id="city" class="form-control" placeholder="should use typeahead to show list of cities" required> </div> <div class="form-group"> <label for="address1">Address</label> <input type="text" id="address1" class="form-control" placeholder="Address line 1" required> </div> <div class="form-group"> <input type="text" id="address2" class="form-control" placeholder="Address line 2"> </div> <h3 class="form-login-heading">Google maps</h3> <p>Allow provision of google maps co-ordinates</p> <h3 class="form-login-heading">Custom map</h3> <p>Allow upload of a custom map</p> <h3 class="form-login-heading">Directions</h3> <div class="form-group"> <label for="directions">How to reach us:</label> <textarea id="directions" class="form-control" rows="6"></textarea> </div>
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head">
+  <div class="container">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+      <h1>Configure: seaviewholidays.rentify.com
+        <small>configure themes, styling, property details and pages</small>
+      </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+  </div>
+</div>
+<!-- END PAGE HEAD -->
+
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+  <div class="container">
+    <!-- BEGIN PAGE CONTENT INNER -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="#/configuresitetheme" data-toggle="tab" aria-expanded="false">
+                Theme and Styling</a>
+            </li>
+            <li class="active">
+              <a href="#/configuresiteproperties" data-toggle="tab" aria-expanded="false">
+                Properties</a>
+            </li>
+            <li>
+              <a href="#/configuresitepages" data-toggle="tab" aria-expanded="true">
+                Pages</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active">
+              <!-- BEGIN TAB CONTENT -->
+
+              <div class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <span class="navbar-brand">
+                    Configure Property: Property One </span>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class=""><a href="#/configurepropertyoverview">Overview</a></li>
+                    <li class="active"><a href="#/configurepropertylocation">Location</a></li>
+                    <li class=""><a href="#/configurepropertygallery">Gallery</a></li>
+                    <li class=""><a href="#/configurepropertyrates">Rates</a></li>
+                    <li class=""><a href="#/configurepropertycontacts">Contact</a></li>
+                    <li class=""><a href="#/configurepropertyreviews">Reviews</a></li>
+                  </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Property Address</h4>
+                </div>
+                <div class="panel-collapse collapse in" aria-expanded="true">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="country">Country</label>
+                      <input type="text" id="country" class="form-control"
+                             placeholder="should use typeahead to show countries" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="city">City / Town</label>
+                      <input type="text" id="city" class="form-control"
+                             placeholder="should use typeahead to show list of cities" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="address1">Address</label>
+                      <input type="text" id="address1" class="form-control" placeholder="Address line 1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="address2" class="form-control" placeholder="Address line 2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Google Maps</h4>
+                </div>
+                <div class="panel-collapse collapse in" aria-expanded="true">
+                  <div class="panel-body">
+                    <p>Allow user top specify co-ordinates for their address to be show on google maps, verify with the location in google maps</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Custom Map</h4>
+                </div>
+                <div class="panel-collapse collapse in" aria-expanded="true">
+                  <div class="panel-body">
+                    <p>Allow user top upload an image depicting a custom map of their accomodation location</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Directions</h4>
+                </div>
+                <div class="panel-collapse collapse in" aria-expanded="true">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="directions">How to reach us:</label>
+                      <textarea id="directions" class="form-control" rows="6"></textarea>
+                      <span class="help-block">Enter the directions to your accomodation. You may want to enter multiple sets of directions from different general starting areas. </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- END TAB CONTENT -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

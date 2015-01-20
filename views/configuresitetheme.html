@@ -1,1 +1,191 @@
-<p>&nbsp;</p> <ul class="nav nav-pills"> <li role="presentation"><a href="#">seaviewholidays.rentify.com</a></li> <li role="presentation" class="active"><a href="#/configuresitetheme">Theme and Styling</a></li> <li role="presentation"><a href="#/configuresiteproperties">Property Details</a></li> <li role="presentation"><a href="#/configuresitepages">Pages</a></li> </ul> <h2>Theme and Styling</h2> <h3 class="form-login-heading">Select the theme and styling details for your website</h3> <div class="form-group"> <label for="theme">Select Theme:</label> <select id="theme"> <option>Theme 1 <option>Theme 2 <option>Theme 3 <option>Theme 4 </select> </div> <div class="form-group"> <label for="colourPalette">Select Colour Palette:</label> <select id="colourPalette"> <option>Light Blue <option>Blue <option>Light Green <option>Green </select> </div> <div class="form-group"> <input type="text" class="form-control" placeholder="Logo Text" required> </div> <p>Or</p> <div class="form-group"> Control to upload Logo image </div> <div class="form-group"> <button class="btn btn-info btn-block">Apply</button> </div>
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head">
+  <div class="container">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+      <h1>Configure: seaviewholidays.rentify.com
+        <small>configure themes, styling, property details and pages</small>
+      </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+  </div>
+</div>
+<!-- END PAGE HEAD -->
+
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+  <div class="container">
+    <!-- BEGIN PAGE CONTENT INNER -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#/configuresitetheme" data-toggle="tab" aria-expanded="false">
+                Theme and Styling</a>
+            </li>
+            <li>
+              <a href="#/configuresiteproperties" data-toggle="tab" aria-expanded="false">
+                Properties</a>
+            </li>
+            <li>
+              <a href="#/configuresitepages" data-toggle="tab" aria-expanded="true">
+                Pages</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active">
+              <!-- BEGIN TAB CONTENT -->
+              <h4>Select the theme and styling details for your website</h4>
+
+              <p>&nbsp;</p>
+
+              <form class="form-horizontal">
+                <div class="form-body">
+                  <div class="form-group">
+                    <label class="col-md-2 control-label" for="theme">Select Theme:</label>
+
+                    <div class="col-md-3">
+                      <select id="theme" class="form-control">
+                        <option>Theme 1</option>
+                        <option>Theme 2</option>
+                        <option>Theme 3</option>
+                        <option>Theme 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-2 control-label" for="colourPalette">Select Colour Palette:</label>
+
+                    <div class="col-md-3">
+                      <select id="colourPalette" class="form-control">
+                        <option>Light Blue</option>
+                        <option>Blue</option>
+                        <option>Light Green</option>
+                        <option>Green</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-2 control-label">Enter Logo Text (if there is no logo image)</label>
+
+                    <div class="col-md-3">
+                      <input type="text" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <p class="col-md-offset-2">
+                      <bold>OR</bold>
+                    </p>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="col-md-2 control-label">Upload Logo image</label>
+
+                    <div class="col-md-3">
+                    <span class="btn green fileinput-button">
+										<i class="fa fa-plus"></i>
+										<span>
+										select Logo image file... </span>
+										<input type="file" name="files[]" multiple="">
+										</span>
+                    </div>
+
+                  </div>
+                  <div class="form-actions">
+                    <div class="row">
+                      <div class="col-md-offset-2 col-md-3">
+                        <button class="btn btn-info">Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- END TAB CONTENT -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+            <p class="name">{%=file.name%}</p>
+            <strong class="error text-danger label label-danger"></strong>
+        </td>
+        <td>
+            <p class="size">Processing...</p>
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+            </div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn blue start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn red cancel">
+                    <i class="fa fa-ban"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+        {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <tr class="template-download fade">
+                <td>
+                    <span class="preview">
+                        {% if (file.thumbnailUrl) { %}
+                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                        {% } %}
+                    </span>
+                </td>
+                <td>
+                    <p class="name">
+                        {% if (file.url) { %}
+                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                        {% } else { %}
+                            <span>{%=file.name%}</span>
+                        {% } %}
+                    </p>
+                    {% if (file.error) { %}
+                        <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                    {% } %}
+                </td>
+                <td>
+                    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                </td>
+                <td>
+                    {% if (file.deleteUrl) { %}
+                        <button class="btn red delete btn-sm" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                            <i class="fa fa-trash-o"></i>
+                            <span>Delete</span>
+                        </button>
+                        <input type="checkbox" name="delete" value="1" class="toggle">
+                    {% } else { %}
+                        <button class="btn yellow cancel btn-sm">
+                            <i class="fa fa-ban"></i>
+                            <span>Cancel</span>
+                        </button>
+                    {% } %}
+                </td>
+            </tr>
+        {% } %}
+    </script>
